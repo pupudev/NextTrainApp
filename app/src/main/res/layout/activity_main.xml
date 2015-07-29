@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/btnSend"
+        android:layout_marginTop="37dp"
+        android:clickable="true"
+        android:onClick="showNextTrainDetails"
+        android:enabled="true"
+        android:layout_below="@+id/txtDestination"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Origin"
+        android:id="@+id/lblOrigin"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Destination"
+        android:id="@+id/lblDestination"
+        android:layout_below="@+id/txtOrigin"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtOrigin"
+        android:elegantTextHeight="false"
+        android:editable="true"
+        android:lines="1"
+        android:enabled="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:maxLength="50"
+        android:layout_alignBottom="@+id/lblOrigin"
+        android:layout_toLeftOf="@+id/btnSend"
+        android:layout_toStartOf="@+id/btnSend" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtDestination"
+        android:layout_alignBottom="@+id/lblDestination"
+        android:layout_alignLeft="@+id/txtOrigin"
+        android:layout_alignStart="@+id/txtOrigin"
+        android:elegantTextHeight="false"
+        android:editable="true"
+        android:lines="1"
+        android:enabled="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:maxLength="50" />
+
+</RelativeLayout>
